@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Σταματάκης;Μιχαήλ;Γ.;;
+FN:ΦΑΡΜΑΚΕΙΟ ΣΤΑΜΑΤΑΚΗΣ
+ORG:Φαρμακείο Σταματάκης Μιχαήλ
+TITLE:Φαρμακοποιός
+TEL;type=CELL;type=VOICE:+306984953652
+TEL;type=WORK;type=VOICE:+302810281647
+EMAIL;type=INTERNET;type=WORK:stamatakis51@gmail.com
+URL:https://www.google.com/maps/search/?api=1&query=Λεωφόρος+Παπαναστασίου+211+Ηράκλειο
+ADR;type=WORK:;;Λεωφόρος Παπαναστασίου 211;Ηράκλειο;Κρήτη;71409;Ελλάδα
+NOTE:Φαρμακείο Σταματάκης Μιχαήλ - Λεωφόρος Παπαναστασίου 211, Ηράκλειο.
+CATEGORIES:Φαρμακείο,Υγεία
+END:VCARD
