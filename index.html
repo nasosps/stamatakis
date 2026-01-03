@@ -48,7 +48,6 @@ body{
   position:fixed;
   inset:0;
   pointer-events:none;
-  /* Βεβαιωθείτε ότι το αρχείο λέγεται logo.jpg */
   background:url("logo.jpg") center / min(800px,90vw) no-repeat;
   opacity:.04;
   filter:grayscale(100%);
@@ -82,7 +81,7 @@ body{
 }
 
 .inner{
-  padding:18px 14px 24px; /* Μειωμένο padding κάτω */
+  padding:18px 14px 24px;
 }
 
 .header{
@@ -219,20 +218,22 @@ h1{
   box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
-/* Page Views Counter Styling */
+/* Updated Counter Styling */
 .views-container {
-  margin-top: 20px;
+  margin-top: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  flex-direction: column;
+  gap: 6px;
   font-size: 11px;
   color: var(--muted);
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .views-container img {
-  height: 18px;
+  height: 20px;
   display: block;
+  border-radius: 4px;
 }
 
 footer{
@@ -241,6 +242,10 @@ footer{
   font-size:12px;
   color:rgba(247,247,251,.8);
   text-shadow: 1px 1px 2px #000;
+}
+
+@media (max-width: 480px){
+  .views{ bottom:4px; right:6px; }
 }
 </style>
 </head>
@@ -408,8 +413,7 @@ footer{
     </footer>
 
     <div class="views-container">
-      <span>Views:</span>
-      <img id="hitCounter" alt="counter">
+      <img id="hitCounter" alt="Page Views">
     </div>
 
   </div>
@@ -419,11 +423,12 @@ footer{
 <script>
 document.getElementById("y").textContent = new Date().getFullYear();
 
+// Fixed Identifier for Counter (Works even on local files)
 (function () {
-  var url = encodeURIComponent(window.location.href);
+  var uniquePageId = "stamatakis-pharmacy-vcard-v1"; // Σταθερή ταυτότητα
   document.getElementById("hitCounter").src =
-    "https://hitscounter.dev/api/hit?url=" + url +
-    "&label=&icon=chart&color=%23198754&style=flat";
+    "https://hitscounter.dev/api/hit?url=" + uniquePageId +
+    "&label=Views&icon=eye&color=%23198754&style=flat";
 })();
 </script>
 </body>
